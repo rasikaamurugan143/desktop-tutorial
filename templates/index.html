@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishing Detection System</title>
+    <!-- Premium Cyber/Hacker Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="crt-overlay">
+    <!-- Matrix Digital Rain Canvas -->
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- Grid / Layout overlay -->
+    <div class="cyber-grid"></div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="logo-text glitch" data-text="Fishing Detection System" style="font-size: 3rem;">Fishing Detection System</h1>
+            <div class="sys-status">
+                <span class="pulse-dot"></span>
+                <span>SYSTEM.ONLINE // AI.ACTIVE</span>
+            </div>
+        </header>
+
+        <section class="cyber-deck">
+            <div class="deck-frame">
+                <div class="frame-corner topleft"></div>
+                <div class="frame-corner topright"></div>
+                <div class="frame-corner botleft"></div>
+                <div class="frame-corner botright"></div>
+
+                <div class="terminal-header">
+                    <span class="term-title">Target Interface</span>
+                    <div class="term-controls">
+                        <span>_</span><span>[ ]</span><span>X</span>
+                    </div>
+                </div>
+
+                <form id="scan-form" class="scan-form">
+                    <div class="input-wrapper">
+                        <span class="prompt">root@engine:~#</span>
+                        <input type="url" id="url-input" placeholder="Enter Target URL to penetrate and analyze..."
+                            required autocomplete="off">
+                        <button type="submit" id="scan-btn" class="scan-btn cybr-btn">
+                            <span class="btn-text">EXECUTE</span>
+                            <span class="btn-glitch"></span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Scanning Output Simulation -->
+                <div id="terminal-output" class="terminal-output hidden">
+                    <ul id="console-lines"></ul>
+                </div>
+
+                <div id="result-container" class="result-container hidden">
+                    <div class="result-card" id="result-card">
+                        <div class="card-bg-glitch"></div>
+                        <div class="scan-bracket left"></div>
+                        <div class="result-core">
+                            <div class="result-icon pulse" id="result-icon"></div>
+                            <div class="result-content">
+                                <h2 id="result-title">VERDICT</h2>
+                                <p id="result-text" class="result-message"></p>
+                            </div>
+                        </div>
+                        <div class="scan-bracket right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="data-streams">
+            <div class="stream">DECRYPTING.SSL [ACTIVE]</div>
+            <div class="stream">HEURISTIC.MODELS [LOADED]</div>
+            <div class="stream">PHISHING.SIGS [1,048,576]</div>
+        </div>
+    </div>
+
+    <!-- Scan Line overlay -->
+    <div class="scanlines"></div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
